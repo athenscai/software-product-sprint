@@ -17,7 +17,7 @@
  */
 function addRandomGreeting() {
   const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+      ['I was a bobarista', 'Ive been drinking matcha everyday', 'I was born on an island', 'Im lactose intorlant'];
 
   // Pick a random greeting.
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
@@ -26,3 +26,9 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+function createMap() {
+    const map = new google.maps.Map(
+        document.getElementById('map'),
+        {center: {lat: 37.422, lng: -122.084}, zoom: 16});
+  }

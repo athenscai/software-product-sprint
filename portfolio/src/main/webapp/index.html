@@ -2,18 +2,33 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>Athens Portfolio</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4XKtXrsZGIvyceNBUk_LBJdSLrc6vXq0"></script>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
-  <body>
+  <body onload="createMap();">
     <div id="content">
       <h1>My Portfolio</h1>
       <p>This is my portfolio.</p>
+      <img src="/images/athens.jpg" />
+      <p> I'm a incoming junior studying Computer Science at Lehigh University.</p>
       <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
+      <p>Click here to get a fun fact about me:</p>
+      <button onclick="addRandomGreeting()">click on meee </button>
       <div id="greeting-container"></div>
     </div>
+    <div id="map"></div>
+    <form action="/form-handler" method="POST">        
+        <p>Name:</p>
+        <textarea name="name-input"></textarea>
+        <p>Email:</p>
+        <textarea name="email-input"></textarea>
+        <p>Text:</p>
+        <textarea name="text-input"></textarea>
+        <br/>
+        <input type="submit" />
+      </form>
   </body>
 </html>
